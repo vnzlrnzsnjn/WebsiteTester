@@ -20,7 +20,6 @@ div.middle img {
 }
 #time{
     font-size:2.5vw;
-    animation: fadein 2s;
 }
 .bottomleft {
     position: absolute;
