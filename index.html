@@ -1,54 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="Media/js/TimeCircles.js"></script>
+    <link rel="stylesheet" href="Media/css/TimeCircles.css">
+    <link rel="stylesheet" href="Media/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700"rel="stylesheet">
     <title>Get ready for Aiwa</title>
-    <link rel="stylesheet" href="MediaFiles/css/landing-page.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <style>
-        #siric {
-          width: 400px;
-          height: 100px;
-          display: block;
-          margin: 30px auto;
-        }
-      </style>
 </head>
+
 <body>
-    <div class="bgimg">
-        <div class="topleft">
-           
-                </iframe>
+
+    <div class="container-fluid align-items-center">
+        <div class="row">
+            <div class="col-12 col-md-7 col-lg-4 mid">
+                <img id="aiwalogo" class="fade-in" src="Media/imgs/Aiwa_Current_Logo.svg.png">
+                <p id="centertext">A legendary listening experience coming to you soon.</p>
+                <div id="siric"></div>
+                <div id="DateCountdown" data-date="2018-05-10 12:00:00"></div>
+            </div>
         </div>
-        <div class="middle">
-          <img id="aiwalogo" class="fade-in" src="MediaFiles/imgs/Aiwa_Current_Logo.svg.png" alt="">
-          <h1>A legendary listening experience coming to you soon.</h1>
-          <div id="siric"></div>
-
-          <div class="countdownwrap"></div>
+        <div class="products">
+            <img class="soundsystem" src="Media/imgs/soundsystem.jpg" />
+            <img class="earphone" src="Media/imgs/earphone.png" />
+            <img class="headphone" src="Media/imgs/headphone.jpg" />
+            <img class="television" src="Media/imgs/television.png" />
         </div>
-        <div class="bottomleft">
-          <p>Copyright © 2018 Aiwa Philippines.</p>
-        </div>
-      </div>
+    </div>
+    
 
 
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous"></script>
-      <script src="MediaFiles/js/landing-page.js"></script>
-      <script src="MediaFiles/js/siriwave.js"></script>
-      <script>
-          var SW = new SiriWave({
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <script src="Media/js/siriwave.js"></script>
+    <script src="Media/js/index.js"></script>
+    
+        <script>
+        var SW = new SiriWave({
             style: 'ios9',
-            width: 400,
+            width: 300,
             height: 100,
-            speed: 0.03,
+            speed: 0.04,
             amplitude: 1,
             container: document.getElementById('siric'),
             autostart: true,
-          });
-        </script>
+
+        });
+
+    </script>
+    <script>
+        $("#DateCountdown").TimeCircles({
+            "animation": "smooth",
+            "bg_width": 0.9,
+    "fg_width": 0.02,
+            "circle_bg_color": "#fff0f1",
+            "time": {
+                "Days": {
+                    "text": "Days",
+                    "color": "#f44242",
+                    "show": true
+                },
+                "Hours": {
+                    "text": "Hours",
+                    "color": "#f44242",
+                    "show": true
+                },
+                "Minutes": {
+                    "text": "Minutes",
+                    "color": "#f44242",
+                    "show": true
+                },
+                "Seconds": {
+                    "text": "Seconds",
+                    "color": "#f44242",
+                    "show": true
+                }
+            }
+        });
+
+    </script>
 </body>
+
 </html>

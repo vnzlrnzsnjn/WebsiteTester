@@ -71,6 +71,7 @@ SiriWave9Curve.prototype.draw = function() {
 SiriWave9Curve.prototype.definition = [
 { color: '253, 71, 71' },
 { color: '253, 71, 71' },
+{ color: '253, 71, 71' },
 { color: '253, 71, 71' }
 ];
 
