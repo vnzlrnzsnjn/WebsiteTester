@@ -52,6 +52,15 @@ html {
     animation-duration: 1s;
 }
 
+@-webkit-keyframes fadeInItem {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
 .mid {
     position: absolute;
     top: 50%;
@@ -175,7 +184,7 @@ p {
     }
     .headphone {
         top: 80%;
-        right: -15%;
+        left:52%;
     }
     .soundsystem {
         top: 20%;
@@ -258,7 +267,7 @@ p {
         left: 5%;
     }
     .headphone {
-        top: 90%;
+        top: 80%;
         left: 75%;
     }
     .soundsystem {
